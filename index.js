@@ -53,9 +53,11 @@ function displayList (data, value) {
     })
     console.log(filterData);
     if (filterData.length === 0){
-        alert('no match result')
+        const p = document.createElement("p")
+        p.innerText = 'no match result'
     } else {
         filterData.forEach(item => {
+            ul.innerHTML =""
             const li = document.createElement('li')
             li.innerText = item.name
             ul.appendChild(li)
